@@ -21,12 +21,12 @@ router.get("/", getAllPosts);
 router.get("/post/:pid", getPost);
 //new
 router.patch("/like/:pid/:uid", likePost); // /:uid added by fahim
-router.put("/updatepost/:pid", updatePost);
+router.put("/update/:pid", updatePost);
 router.post("/comments/:pid/:uid", commentPost);
-router.delete("/deletepost", deletePost);
+router.delete("/delete", deletePost);
 // router.get("/getLatest", getLatest);
 
 // router.post("/createPost and upload")
-router.post("/createpost/:uid", uploadFile.single("filePath"), createPost);
+router.post("/create/:uid", uploadFile.single("filePath"), createPost);
 
 module.exports = router;
