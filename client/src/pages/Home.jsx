@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import { ChatContext } from "../context/SharedContext";
+import { UserContext } from "../context/SharedContext";
 import { Link } from "react-router-dom";
 import NavBar from "../components/Navbar/Navbar";
 import LeftSideBarLinks from "../components/LeftSidebarLinks/LeftSideBarLinks";
@@ -12,7 +12,7 @@ import "./home.css";
 import RightSideBarLinks from "../components/RightSideBarLinks/RightSideBarLinks";
 
 export default function Home() {
-  const { state, dispatch } = useContext(ChatContext);
+  const { state, dispatch } = useContext(UserContext);
   const [reload, setReload] = useState(true);
 
   const navigate = useNavigate();

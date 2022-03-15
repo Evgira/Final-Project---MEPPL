@@ -1,7 +1,7 @@
 import React, { useState, useContext, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import makeCall from "../../api/Call";
-import { ChatContext } from "../../context/SharedContext";
+import { UserContext } from "../../context/SharedContext";
 import { useNavigate } from "react-router-dom";
 import Google from "../../img/google.png";
 import Github from "../../img/github.png";
@@ -72,7 +72,7 @@ export default function Login() {
 
   const [errorMsg, setErrorMsg] = useState("");
 
-  const { state, dispatch } = useContext(ChatContext);
+  const { state, dispatch } = useContext(UserContext);
   let navigate = useNavigate();
 
   function login(inputValues) {

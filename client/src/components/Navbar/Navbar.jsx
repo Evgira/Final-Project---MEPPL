@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { ChatContext } from "../../context/SharedContext";
+import { UserContext } from "../../context/SharedContext";
 import bird from "../../img/bird.svg";
 import { CSSTransition } from "react-transition-group";
 
@@ -9,7 +9,7 @@ import "../../pages/home.css";
 
 export default function NavBar() {
   const dropdownRef = useRef(null);
-  const { state } = useContext(ChatContext);
+  const { state } = useContext(UserContext);
   const [dropDown, setDropDown] = useState(false);
 
   const logout = () => {

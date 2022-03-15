@@ -7,13 +7,13 @@ import axios from "axios";
 import "./post.css";
 // import "../../pages/home.css";
 import { useContext } from "react";
-import { ChatContext } from "../../context/SharedContext";
+import { UserContext } from "../../context/SharedContext";
 import { CSSTransition } from "react-transition-group";
 
 function Post() {
   const [posts, setPosts] = useState([]);
   const [isLiked, setIsLiked] = useState(false);
-  const { state, dispatch } = useContext(ChatContext);
+  const { state, dispatch } = useContext(UserContext);
   const [comment, setComment] = useState();
   const [openComment, setOpenComment] = useState(false);
   const [buttonValue, setButtonValue] = useState(Number);

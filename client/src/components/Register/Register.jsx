@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import makeCall from "../../api/Call";
 import env from "../../api/env";
 import { useNavigate } from "react-router-dom";
-import { ChatContext } from "../../context/SharedContext";
+import { UserContext } from "../../context/SharedContext";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -27,7 +27,7 @@ const schema = yup
   })
   .required();
 export default function Registration() {
-  const { state, dispatch } = useContext(ChatContext);
+  const { state, dispatch } = useContext(UserContext);
   let navigate = useNavigate();
 
   const {

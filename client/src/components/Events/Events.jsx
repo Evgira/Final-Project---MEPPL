@@ -4,7 +4,7 @@ import axios from "axios";
 import { ModalPopUp } from "../Form/ModalPopUp";
 import Navbar from "../Navbar/Navbar";
 import "./events.css";
-import { ChatContext } from "../../context/SharedContext";
+import { UserContext } from "../../context/SharedContext";
 import { useContext } from "react";
 import Filter from "./Filter";
 import { motion, AnimatePresence } from "framer-motion";
@@ -24,7 +24,7 @@ const Events = () => {
     getEvents();
   }, []);
 
-  const { state, dispatch } = useContext(ChatContext);
+  const { state, dispatch } = useContext(UserContext);
 
   //--------------Cokies----------------------------
   useEffect(() => {

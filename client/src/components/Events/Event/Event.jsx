@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import moment from "moment";
 import "./event.css";
-import { ChatContext } from "../../../context/SharedContext";
+import { UserContext } from "../../../context/SharedContext";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -11,7 +11,7 @@ import { MdDelete } from "react-icons/md";
 const url = "http://localhost:5001/events";
 
 const Event = ({ event }) => {
-  const { state, dispatch } = useContext(ChatContext);
+  const { state, dispatch } = useContext(UserContext);
 
   const deleteEvent = (id) => axios.delete(`${url}/${id}`);
 

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUpload } from "@fortawesome/free-solid-svg-icons";
 import makeCall from "../../api/Call";
 import env from "../../api/env";
-import { ChatContext } from "../../context/SharedContext";
+import { UserContext } from "../../context/SharedContext";
 import { CSSTransition } from "react-transition-group";
 
 function StyledUploadBTN(props) {
@@ -40,7 +40,7 @@ function StyledUploadBTN(props) {
 //Structure for new post
 //Input required from User: Content, UploadFile
 export default function CreateNewPost() {
-  const { state } = useContext(ChatContext);
+  const { state } = useContext(UserContext);
   const [newPostData, setNewPostData] = useState({
     content: "",
     fileDescription: "",

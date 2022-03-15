@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import makeCall from "../api/Call";
 import env from "../api/env";
-import { ChatContext } from "../context/SharedContext";
+import { UserContext } from "../context/SharedContext";
 import NavBar from "../components/Navbar/Navbar";
 import LeftSideBarLinks from "../components/LeftSidebarLinks/LeftSideBarLinks";
 import ProjectForm from "../components/Project/ProjectForm";
@@ -10,7 +10,7 @@ import "./projects.css";
 import RightSideBarLinks from "../components/RightSideBarLinks/RightSideBarLinks";
 
 export default function Projects() {
-  const { state, dispatch } = useContext(ChatContext);
+  const { state, dispatch } = useContext(UserContext);
   const [projects, setProjects] = useState([]);
   const [reload, setReload] = useState(true);
   useEffect(() => {
